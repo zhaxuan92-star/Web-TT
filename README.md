@@ -1,25 +1,29 @@
-# VZC News — Web-TT
+# Web-TT / VZC News
 
-Nền tảng tin tức đa nhánh, giao diện tiếng Việt, xây dựng bằng React + Vite.
+A mobile-first community news platform built with React and Vite.
 
-## Tính năng hiện có
-- Trang chủ và danh sách nhánh tin tức.
-- Tạo nhánh với tên, mô tả, màu nhận diện và slug tự sinh.
-- Trang riêng cho từng nhánh tại `/branch/:slug`.
-- Đăng và đọc bài viết trong từng nhánh.
-- Tìm kiếm bài viết.
-- Lưu dữ liệu bằng localStorage trên trình duyệt.
+## Features
+- Create and browse community news branches.
+- Publish articles and search across the public news feed.
+- Embed World Simulator OSM at `/world-simulator` behind the activation gate.
+- Shared Google Firebase / Cloud Firestore backend with World-Simulator-OSM.
+- Public read access for branches/articles; authenticated owner-only writes and deletes.
+- LocalStorage fallback when Firebase is unavailable.
 
-## Chạy cục bộ
+## Shared database
+Web-TT uses the same Firebase project as [World-Simulator-OSM](https://github.com/zhaxuan92-star/World-Simulator-OSM):
+- `news_branches`: branch metadata and owner ID.
+- `news_articles`: article content and author ID.
+- Existing game collections (`players`, `worlds`, `ai_training`, `global_champion`) remain separate and retain their existing rules.
+
+Before cloud sync works, publish the updated `firestore.rules` from the World-Simulator-OSM repository to the Firebase project. Without that step, Web-TT will continue to save locally and show a cloud-sync warning.
+
+## Development
 ```bash
 npm install
 npm run dev
-```
-
-## Build
-```bash
 npm run build
 ```
 
-## Lưu ý về dữ liệu
-Phiên bản 0.1.0 là prototype frontend: dữ liệu lưu trong trình duyệt của từng thiết bị, chưa đồng bộ giữa người dùng. Để mở thành nền tảng cộng đồng thực sự cần bổ sung backend/database, đăng nhập, phân quyền chủ nhánh và kiểm duyệt nội dung.
+## Notes
+The Firebase web config is a public client configuration, not a server secret. Firestore Security Rules are the access-control boundary. Do not put Firebase Admin credentials or service-account private keys in this frontend repository.

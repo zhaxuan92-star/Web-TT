@@ -20,3 +20,8 @@
 .world-lock-card small{display:block;margin-top:19px;color:#71839c;font-size:10px;line-height:1.7}
 .world-error{display:block;color:#fca5a5;font-size:12px;margin-top:12px}
 @media(max-width:650px){.world-embed-section{padding:24px 14px 35px}.world-embed-head{align-items:flex-start;flex-direction:column}.world-frame-wrap{height:calc(100vh - 245px);min-height:470px;border-radius:10px}.world-lock-card{margin:35px auto 0;padding:22px 17px}.world-lock-card form{flex-direction:column}.world-lock-card form button{width:100%}}
+
+/* Vzc copyright center footer link */
+.copyright-link{color:#77b9ff;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.2px}
+.copyright-link:hover{color:#fff;text-decoration:underline}
+footer .copyright-link{overflow-wrap:anywhere}

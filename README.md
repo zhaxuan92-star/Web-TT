@@ -10,6 +10,14 @@ A mobile-first community news platform built with React and Vite.
 - Public read access for branches/articles; authenticated owner-only writes and deletes.
 - LocalStorage fallback when Firebase is unavailable.
 
+## Vzc© brand and copyright information
+- Parent brand hub: https://vzc-copyright-center.vercel.app/
+- Machine-readable brand profile: https://vzc-copyright-center.vercel.app/brand.json
+- AI/crawler guide: https://vzc-copyright-center.vercel.app/llms.txt
+- Copyright information: https://vzc-copyright-center.vercel.app/copyright/
+- Brand relationship: Web TT is a Vzcapps application.
+- Public machine-readable product metadata is available at `/brand.json`, `/llms.txt`, and `/copyright.txt` on the deployed site.
+
 ## Shared database
 Web-TT uses the same Firebase project as [World-Simulator-OSM](https://github.com/zhaxuan92-star/World-Simulator-OSM):
 - `news_branches`: branch metadata and owner ID.

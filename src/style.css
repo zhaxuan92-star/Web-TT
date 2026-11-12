@@ -25,3 +25,12 @@
 .copyright-link{color:#77b9ff;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.2px}
 .copyright-link:hover{color:#fff;text-decoration:underline}
 footer .copyright-link{overflow-wrap:anywhere}
+
+/* Cloudflare Turnstile human verification gate */
+.human-gate{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:rgba(3,9,19,.84);backdrop-filter:blur(12px)}
+.human-card{width:min(100%,430px);padding:30px 24px;border:1px solid #ffffff24;border-radius:18px;background:linear-gradient(145deg,#172942,#0e1929);box-shadow:0 30px 100px #000b;text-align:center}
+.human-shield{width:54px;height:54px;margin:0 auto 17px;display:grid;place-items:center;border-radius:16px;background:#1d9b6c24;color:#53e0a8;font-size:28px;font-weight:800}
+.human-card h1{font:800 24px Manrope;color:#f3f6fc;margin:12px 0 8px}
+.human-card p{font-size:13px;line-height:1.7;color:#9aabc1;margin:0 auto 20px}
+.turnstile-slot{display:flex;justify-content:center;min-height:66px;margin:0 auto 12px}
+.human-card small{display:block;color:#8ea2bd;font-size:11px;line-height:1.6}
